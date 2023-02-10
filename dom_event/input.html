@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Input</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <div>
+            <h2 id="dynamic_text">Default text</h2> <br>
+            <input id="input_field" type="text"> <br>
+            <button id="btn-update">Update</button> <br>
+
+
+            
+        </div>
+         
+    </div>
+
+
+    <script>
+        document.getElementById('btn-update').addEventListener('click', function(){
+            const inputField = document.getElementById('input_field');
+            const inputText= inputField.value;
+
+            const p = document.getElementById('dynamic_text');
+            p.innerText= inputText;
+            inputField.value='';
+                        
+        })
+        
+            
+        
+    </script>
+    
+</body>
+</html>
